@@ -1,0 +1,31 @@
+.banner {
+  background-color: $whitish;
+  color: $dark-gray;
+
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .brand {
+      @extend .h2;
+    }
+
+    .menu-main-container {
+      font-family: $raleway;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      .current_page_item {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
