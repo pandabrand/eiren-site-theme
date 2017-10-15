@@ -6,6 +6,10 @@
     padding-top: 15px;
     padding-bottom: 15px;
 
+    .navbar {
+      padding: 0.5rem 0;
+    }
+
     .brand {
       @extend .h2;
       @extend .text-nowrap;
@@ -17,7 +21,7 @@
       text-transform: uppercase;
       background-color: rgba($whitish, 0.9);
       position: absolute;
-      top: 74px;
+      top: 0;
       right: 0;
       left: 0;
       height: calc(100vh - 89px);

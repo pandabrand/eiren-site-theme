@@ -1,0 +1,39 @@
+@import "home";
+
+.main {
+  padding: 2rem 0;
+
+  .page-header {
+    margin-bottom: 5rem;
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: bold;
+    }
+  }
+
+  article {
+    header {
+      margin-bottom: 2.25rem;
+
+      h2.entry-title {
+        font-weight: bold;
+      }
+
+      time {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+body.blog {
+  article {
+    display: flex;
+    margin-bottom: 5rem;
+
+    .single-content-thumbnail {
+      margin-right: 2.25rem;
+    }
+  }
+}

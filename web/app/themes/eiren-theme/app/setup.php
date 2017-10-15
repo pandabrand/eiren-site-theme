@@ -66,6 +66,13 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    /**
+     * Adding custom image sizes for this theme
+     * @link https://developer.wordpress.org/reference/functions/add_image_size/
+     */
+    add_image_size( 'eiren-news_thumbnail', 180, 240 );
+
 }, 20);
 
 /**

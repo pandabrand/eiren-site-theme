@@ -2,10 +2,10 @@
   background-blend-mode: normal, screen;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left 70px;
+  background-position: left center;
 
   @include media-breakpoint-up(sm) {
-    background-position: center 70px;
+    background-position: center center;
   }
 
   .main {
