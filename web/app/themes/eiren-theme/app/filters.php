@@ -74,7 +74,7 @@ add_filter('sage/display_sidebar', function ($display) {
 
     isset($display) || $display = in_array(true, [
       // The sidebar will be displayed if any of the following return true
-      is_page(),
+      is_page(['writing', 'music']),
       is_home(),
       is_category( 'press' ),
       // ... more types

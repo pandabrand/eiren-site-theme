@@ -1,4 +1,4 @@
-<footer class="content-info fixed-bottom">
+<footer class="content-info footer fixed-bottom">
   <div class="container">
     <div class="row justify-content-between">
       <div class="copyright-info">
