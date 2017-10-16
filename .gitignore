@@ -21,3 +21,6 @@ vendor/*
 
 # Mac Garbage
 **/.DS_Store
+
+#all-in-one backups
+web/app/ai1wm-backups/*
