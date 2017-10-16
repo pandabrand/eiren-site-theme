@@ -72,6 +72,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_image_size/
      */
     add_image_size( 'eiren-news_thumbnail', 180, 240 );
+    add_image_size( 'eiren-music_thumbnail', 600, 600, true );
 
 }, 20);
 

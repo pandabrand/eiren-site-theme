@@ -1,4 +1,37 @@
 @import "home";
+@import "music";
+
+body.page {
+  .content {
+    @include make-row();
+
+    .main {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(sm) {
+        @include make-col(12);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(7);
+      }
+    }
+
+    .sidebar {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(5);
+      }
+
+      padding: 2rem 0;
+    }
+  }
+}
 
 .main {
   padding: 2rem 0;
