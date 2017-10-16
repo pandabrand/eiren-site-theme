@@ -76,8 +76,33 @@ add_filter('sage/display_sidebar', function ($display) {
       // The sidebar will be displayed if any of the following return true
       is_page(),
       is_home(),
+      is_category( 'press' ),
       // ... more types
     ]);
 
     return $display;
+});
+
+add_filter( 'pre_get_posts', function( $query ) {
+    if ( !is_admin() && $query->is_main_query() && is_home() ) {
+        $idObj = get_category_by_slug('press');
+        $id = $idObj->term_id;
+        $query->set('category__not_in', [$id]);
+    }
+});
+
+add_filter( 'get_the_archive_title', function( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+
+    return $title;
 });

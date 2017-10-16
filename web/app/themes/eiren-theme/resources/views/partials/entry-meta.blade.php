@@ -1,1 +1,3 @@
-<time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
+@if( !is_category( 'press' ) )
+  <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
+@endif

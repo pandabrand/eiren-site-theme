@@ -1,7 +1,8 @@
 @import "home";
 @import "music";
 
-body.page {
+body.page,
+body.archive {
   .content {
     @include make-row();
 
@@ -60,7 +61,8 @@ body.page {
   }
 }
 
-body.blog {
+body.blog,
+body.archive {
   article {
     display: flex;
     margin-bottom: 5rem;
