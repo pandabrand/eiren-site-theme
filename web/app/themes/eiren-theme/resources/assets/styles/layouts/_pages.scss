@@ -2,7 +2,8 @@
 @import "music";
 
 body.page,
-body.archive {
+body.archive,
+body.single {
   .content {
     @include make-row();
 
@@ -74,7 +75,8 @@ body.archive {
   }
 }
 
-body.page.about {
+body.page.about,
+body.single {
   .content {
     @include make-row();
 
@@ -86,7 +88,16 @@ body.page.about {
 }
 
 .main {
-  padding: 2rem 0;
+  padding: 2rem 0 6rem;
+
+  a {
+    color: $whitish;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($whitish, 15%);
+    }
+  }
 
   .page-header {
     margin-bottom: 5rem;
@@ -103,6 +114,17 @@ body.page.about {
 
       h2.entry-title {
         font-weight: bold;
+
+        a {
+          color: #fff;
+          padding-bottom: 0.25rem;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+            border-bottom: 1px solid #fff;
+          }
+        }
       }
 
       time {

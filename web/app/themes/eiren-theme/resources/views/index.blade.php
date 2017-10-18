@@ -14,5 +14,8 @@
     @include('partials.content-'.get_post_type())
   @endwhile
 
-  {!! get_the_posts_navigation() !!}
+  <div class="nav-links d-flex justify-content-between">
+    <div class="previous">{!! previous_posts_link( '&laquo; Previous' ) !!}</div>
+    <div class="next">{!! next_posts_link( 'Next &raquo;' ) !!}</div>
+  </div>
 @endsection

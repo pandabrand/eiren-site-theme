@@ -6,7 +6,11 @@
       @include('partials/entry-meta')
     </header>
     <div class="entry-summary">
-      @php(the_excerpt())
+      @if( is_category( 'press' ) )
+        @php( the_content() )
+      @else
+        @php(the_excerpt())
+      @endif
     </div>
   </div>
 </article>
