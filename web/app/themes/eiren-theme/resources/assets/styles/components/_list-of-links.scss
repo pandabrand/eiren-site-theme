@@ -1,0 +1,11 @@
+.list-of-links {
+  margin-top: 1rem;
+
+  .listed-link {
+    margin: 0.5rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

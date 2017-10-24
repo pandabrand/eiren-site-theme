@@ -10,6 +10,8 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+$fa-font-path: "~font-awesome/fonts";
+
 @import "~font-awesome/scss/font-awesome";
 
 /** Import theme styles */

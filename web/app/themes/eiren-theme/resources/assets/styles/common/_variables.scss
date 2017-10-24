@@ -33,4 +33,5 @@ $raleway:   'Raleway';
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-base:       $open-sans, $font-family-sans-serif;
 
-$headings-font-family:   $raleway;
+$headings-font-family:   $font-family-base;
+$headings-font-weight:   400;

@@ -1,8 +1,9 @@
 @import "home";
 @import "music";
+@import "video";
+@import "../components/list-of-links";
 
 body.page,
-body.archive,
 body.single {
   .content {
     @include make-row();
@@ -39,6 +40,8 @@ body.single {
 
         .page-content {
           @include make-col-ready();
+
+          padding-left: 0;
 
           @include media-breakpoint-up(sm) {
             @include make-col(12);
@@ -87,7 +90,8 @@ body.single {
   }
 }
 
-.main {
+.main,
+.sidebar {
   padding: 2rem 0 6rem;
 
   a {
@@ -100,11 +104,10 @@ body.single {
   }
 
   .page-header {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 
     h1 {
       font-size: 2.25rem;
-      font-weight: bold;
     }
   }
 
@@ -113,11 +116,9 @@ body.single {
       margin-bottom: 2.25rem;
 
       h2.entry-title {
-        font-weight: bold;
-
         a {
           color: #fff;
-          padding-bottom: 0.25rem;
+          padding-bottom: 0.125rem;
           text-decoration: none;
 
           &:hover {
@@ -138,7 +139,12 @@ body.blog,
 body.archive {
   article {
     display: flex;
-    margin-bottom: 5rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
+    }
 
     .single-content-thumbnail {
       margin-right: 2.25rem;
